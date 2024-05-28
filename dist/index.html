@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="header"></div>
-    <div class="sidebar"></div>
-    <div class="content"></div>
-    
-    
-    
-    
-    <div class="to-do-item-modal">
-        <form class="form">
-            <h2>Add TO DO</h2>
-            <div class="form-element">
-                <input type="text" id ="title" name="title" placeholder="Title">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <h1>ToDo</h1>
             </div>
-            <div class="form-element">
-                <input type="text" id="description" name="description" placeholder="description">
+        </div>
+        <div class="sidebar">
+            <h1>My current lists</h1>
+            <div class="add-lists-container">
+                <input type="text" id= 'add-list-datafield' min="2" max="20"
+                    placeholder="Enter List Name">
+                <button class="add-new-list-btn">Add +</button>
             </div>
-            <div class="form-element">
-                <input type="date" name="date" id="date" placeholder="mm/dd/yyyy">
-            </div>
-            <div class="form-element">
-                    <input type="radio" id = "priority-low" name = "priority">
+                <div class="lists-content"></div>
+            
+        </div>
+        <div class="content">
+            <h1>To Do Website</h1>
+            <h3>Start of your list by clicking the new + button or select an
+                existing one to start adding your To Do's</h3>
+        </div>
+        <div class="to-do-item-modal">
+            <form class="form">
+                <h2>Add TO DO</h2>
+                <div class="form-element">
+                    <input type="text" id="title" name="title"
+                        placeholder="Title">
+                </div>
+                <div class="form-element">
+                    <input type="text" id="description" name="description"
+                        placeholder="description">
+                </div>
+                <div class="form-element">
+                    <input type="date" name="date" id="date"
+                        placeholder="mm/dd/yyyy">
+                </div>
+                <div class="form-element">
+                    <input type="radio" id="priority-low" name="priority">
                     <label for="priority-low">low</label>
 
-                    <input type="radio" id = "priority-mid" name = "priority">
+                    <input type="radio" id="priority-mid" name="priority">
                     <label for="priority-mid">mid</label>
-                    
-                    <input type="radio" id = "priority-high" name = "priority">
+
+                    <input type="radio" id="priority-high" name="priority">
                     <label for="priority-high">high</label>
-            </div>
-            <div class="form-element">
-                <button class="add-task-btn">Add Task</button>
-            </div>
-        </form>
-    </div>
-    
-<script defer src="bundle.js"></script></body>
+                </div>
+                <div class="form-element">
+                    <button class="add-task-btn">Add Task</button>
+                </div>
+            </form>
+        </div>
+        <div class="overlay"></div>
+        <div class="edit-modal">
+            <div class="close-btn">&times;</div>
+        </div>
+
+    <script defer src="bundle.js"></script></body>
 </html>
