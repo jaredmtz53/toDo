@@ -6,11 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="header">
             <div class="logo">
-                <h1>ToDo</h1>
+                <h1> My ToDo  </h1>
             </div>
         </div>
         <div class="sidebar">
@@ -24,12 +27,12 @@
             
         </div>
         <div class="content">
-            <h1>To Do Website</h1>
-            <h3>Start of your list by clicking the new + button or select an
-                existing one to start adding your To Do's</h3>
+            <h1>My To Do Home</h1>
+            <h3>Click the Add + button or select an
+                existing one to start adding to your To Do's</h3>
         </div>
         <div class="to-do-item-modal">
-            <form class="form">
+            <form class="to-do-form">
                 <h2>Add TO DO</h2>
                 <div class="form-element">
                     <input type="text" id="title" name="title"
@@ -54,14 +57,13 @@
                     <label for="priority-high">high</label>
                 </div>
                 <div class="form-element">
-                    <button class="add-task-btn">Add Task</button>
+                    <button class="add-task-btn">Add +</button>
                 </div>
             </form>
         </div>
-        <div class="overlay"></div>
         <div class="edit-modal">
             <div class="close-btn">&times;</div>
         </div>
-
+        <div class="overlay"></div>
     <script defer src="bundle.js"></script></body>
 </html>

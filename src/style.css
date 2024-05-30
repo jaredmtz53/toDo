@@ -1,8 +1,5 @@
 
-@font-face {
-    font-family: "Poppins";
-    src: url(/src/Poppins/Poppins-Regular.ttf) format("truetype");
-}
+
 html {
     font-family: 'Poppins';
 }
@@ -30,39 +27,68 @@ body {
     height: 100vh;
 }
 .header {
-    background-color: blue;
     grid-area: header;
 }
 .logo {
+    color: rgb(19, 19, 23);
+    font-size: 25px;
+    font-weight: 800;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .logo img {
     height: 20px;
 }
 
 
-
-
 .sidebar {
-    background-color: red;
+    margin-top: 20px;
     grid-area: sidebar;
 }
 .sidebar h1 {
     text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 .add-lists-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 15px;
 }
-
+.add-lists-container input {
+    padding: 10px;
+    border: 2px solid ;
+    border-radius: 10px;
+}
+.add-lists-container button {
+    padding: 10px;
+    border: 2px solid ;
+    border-radius: 10px;    
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+.lists-content {
+    margin-top: 10px;
+}
 .list-card {
     padding: 30px;
     display: flex;
     justify-content: space-between;
-
+    border-radius: 10px;
+    
+}
+.list-title {
+    cursor: pointer;
+}
+.list-title:hover {
+    color: forestgreen;
+}
+.list-card:hover {
+    background-color: gainsboro;
 }
 .list-actions {
     display: flex;
@@ -73,6 +99,65 @@ body {
     height: 30px
 }
 
+/* ----editForm -----*/
+.edit-modal {
+    z-index: 999;
+    width: 400px;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 200ms;
+    
+}
+.edit-modal.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 200ms;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.edit-modal .edit-modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.edit-form {
+    display: flex;
+    flex-direction: column;
+   
+}
+.edit-form input  {
+    border: 2px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.edit-form button {
+    width: 200px;
+    align-self: center;
+    background-color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
 .overlay {
     position: fixed;
     top: 0;
@@ -80,14 +165,75 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 1; /* Below the popup but above other content */
+    z-index: 998; /* Below the popup but above other content */
     display: none; /* Initially hidden */
 }
 
 
 
-
+/* content */
 .content {
-    background-color: green;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-area: content;
+}
+.content h1 {
+    text-align: center;
+}
+
+.to-do-item-modal {
+    z-index: 999;
+    width: 400px;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 200ms;
+}
+.to-do-item-modal h2 {
+    text-align: center;
+    margin: 10px 30px
+}
+.to-do-item-modal .form-element {
+    margin-right: 15px;
+    text-align: center;
+    
+}
+.to-do-item-modal .form-element input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid;
+    margin-bottom: 20px;
+}
+.to-do-item-modal .form-element input[type="date"] {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.to-do-item-modal .form-element input[type="radio"] {
+    margin: 10px;
+    margin-bottom: 20px;
+    
+}
+.add-task-btn {
+    padding: 10px;
+    border: 2px solid ;
+    border-radius: 10px;    
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+.content h3 {
+    text-align: center;
 }
